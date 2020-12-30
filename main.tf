@@ -1,6 +1,10 @@
 provider "aws" {
   version = "2.33.0"
 
+  assume_role {
+    role_arn     = "arn:aws:iam::832150117170:role/terraform-cloud"
+  }
+
   region = var.aws_region
 }
 
